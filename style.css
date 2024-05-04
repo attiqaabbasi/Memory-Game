@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(206, 138, 148), rgb(106, 106, 226));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 4px 4px black;
+  margin: 20px 0px;
+  color: aliceblue;
+}
+.message {
+  font-weight: 700;
+  font-size: 4rem;
+  text-shadow: 4px 4px black;
+  margin: 20px 0px;
+  color: aliceblue;
+  padding-left: 90px;
+}
+
+.game-panel {
+  width: 40%;
+  height: 85%;
+}
+
+.top-panel {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-image: linear-gradient(rgb(149, 149, 228), rgb(206, 138, 148));
+  box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.5), 0 12px 20px 0 rgb(0, 0, 0, 0.7);
+  padding: 4px 10px;
+}
+
+.bottom-panel {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.cards {
+  width: 18%;
+  height: 23%;
+  border: 1px solid black;
+  position: relative;
+  transition: transform 1000ms;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.cards:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 99%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+button {
+  height: 50%;
+  width: 25%;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: black;
+  color: aliceblue;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
